@@ -1,0 +1,18 @@
+[0420/123248.565:ERROR:process_info.cc(359)] UncheckedAllocate
+[0420/123249.300:ERROR:process_info.cc(359)] UncheckedAllocate
+[0420/123250.220:ERROR:process_info.cc(359)] UncheckedAllocate
+[0420/123609.419:ERROR:process_info.cc(359)] UncheckedAllocate
+[0420/123615.672:ERROR:process_info.cc(359)] UncheckedAllocate
+[0420/123630.057:ERROR:process_info.cc(359)] UncheckedAllocate
+[0420/123639.093:ERROR:process_info.cc(359)] UncheckedAllocate
+[0420/222740.557:ERROR:scoped_process_suspend.cc(31)] NtSuspendProcess: 已尝试访问正在退出的过程。 (0xc000010a)
+[0420/222740.557:ERROR:scoped_process_suspend.cc(31)] NtSuspendProcess: 已尝试访问正在退出的过程。 (0xc000010a)
+[0420/222740.557:ERROR:scoped_process_suspend.cc(31)] NtSuspendProcess: 已尝试访问正在退出的过程。 (0xc000010a)
+[0420/222740.662:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::PEB<crashpad::process_types::internal::Traits64>]: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0420/222740.674:ERROR:process_info.cc(551)] ReadProcessData failed
+[0420/222740.662:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::PEB<crashpad::process_types::internal::Traits64>]: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0420/222740.662:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::PEB<crashpad::process_types::internal::Traits64>]: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
+[0420/222740.675:ERROR:process_info.cc(551)] ReadProcessData failed
+[0420/222740.675:ERROR:process_info.cc(551)] ReadProcessData failed
+[0420/230458.885:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: 管道已结束。 (0x6D)
+[0420/230504.602:ERROR:crashpad_client_win.cc(131)] crash server failed to launch, self-terminating
