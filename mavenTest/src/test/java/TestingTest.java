@@ -25,7 +25,7 @@ public class TestingTest {
     @Test
     public void testSearch() {
         driver.get("https://www.sogou.com");
-        WebElement element = driver.findElement(By.id("stb"));
+        WebElement element = driver.findElement(By.id("query"));
         element.clear();
         element.sendKeys("软件测试");
         element.submit();
@@ -40,19 +40,21 @@ public class TestingTest {
     @Test
     public void testNews(){
         driver.get("https://www.sogou.com");
-        WebElement element = driver.findElement(By.cssSelector("#stb"));
+        WebElement element = driver.findElement(By.cssSelector("#query"));
         element.clear();
         element.sendKeys(" ");
         element.submit();
-        assertNotNull("is null",element.getText());
+        assertNotNull("can not be empty",element.getText());
     }
 
     @Test
     public void testQuestion(){
         driver.get("https://www.sogou.com");
-        WebElement element = driver.findElement(By.linkText("问问"));
-        element.click();
-        assertTrue("true",element.getText().equals("问问"));
+        WebElement element = driver.findElement(By.id("query"));
+        element.clear();
+        element.sendKeys("maven");
+        element.submit();
+        assertTrue("true",element.getText().equals("maven"));
     }
     @After
     public void tearDown() throws Exception {
