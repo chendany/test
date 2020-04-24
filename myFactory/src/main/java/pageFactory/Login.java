@@ -43,11 +43,8 @@ public class Login {
     }
     //登录
     public void loginTo(String strUserName,String strPasword){
-        //Fill user name
         this.setUserName(strUserName);
-        //Fill password
         this.setPassword(strPasword);
-        //Click Login button
         this.clickLogin();
     }
 }
