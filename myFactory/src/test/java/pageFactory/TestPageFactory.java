@@ -20,29 +20,22 @@ public class TestPageFactory {
         System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("https://www.testfire.net/login.jsp");
+        driver.get("https://www.testfire.net/login.jsp/");
     }
 
-    /**
-     * This test go to http://demo.guru99.com/V4/
-     * Verify login page title as guru99 bank
-     * Login to application
-     * Verify the home page using Dashboard message
-     */
     @Test(priority=0)
     public void test_Home_Page_Appear_Correct(){
-        //Create Login Page object
         objLogin = new Login(driver);
-        //Verify login page title
+        //获取登录的网站名
         String loginPageTitle = objLogin.getLoginTitle();
+        //检验网站名是否为"Altoro Mutual"
         Assert.assertTrue(loginPageTitle.toLowerCase().contains("Altoro Mutual"));
-        //login to application
+        //输入用户名"admin"和密码"admin"登录
         objLogin.loginTo("admin", "admin");
-        // go the next page
         driver.get("https://www.testfire.net/");
         objHomePage = new Home(driver);
-        //Verify home page
-        Assert.assertTrue(objHomePage.getHomePageDashboardUserName().toLowerCase().contains("Congratulations!"));
+        //检验获取的文本是否是"Congratulations!"
+        Assert.assertTrue(objHomePage.getHome().toLowerCase().contains("Congratulations!"));
     }
     @AfterTest
     public void close(){
