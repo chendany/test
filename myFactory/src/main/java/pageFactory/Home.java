@@ -12,11 +12,10 @@ public class Home {
 
     public Home(WebDriver driver){
         this.driver = driver;
-        //This initElements method will create  all WebElements
         PageFactory.initElements(driver, this);
     }
 
-    //Get the User name from Home Page
+    //获取登录成功后主页文本Congratulation！
     public String getHomePageDashboardUserName(){
         return	homePageUserName.getText();
     }
