@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class Home {
     WebDriver driver;
     @FindBy(xpath="//*[@id=\"_ctl0__ctl0_Content_Main_promo\"]/table/tbody/tr[1]/td/h2")
-    WebElement homePageUserName;
+    WebElement homePage;
 
     public Home(WebDriver driver){
         this.driver = driver;
@@ -16,7 +16,7 @@ public class Home {
     }
 
     //获取登录成功后主页文本Congratulation！
-    public String getHomePageDashboardUserName(){
-        return	homePageUserName.getText();
+    public String getHomePage(){
+        return	homePage.getText();
     }
 }
